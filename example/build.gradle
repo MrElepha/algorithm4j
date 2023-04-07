@@ -4,6 +4,7 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+reporting.baseDir = "./gradle/test-result"
 
 repositories {
     mavenCentral()
@@ -21,4 +22,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    testLogging {
+        events 'PASSED', 'FAILED'
+    }
+    reports {
+        html
+    }
 }

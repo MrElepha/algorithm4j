@@ -3,9 +3,6 @@ import org.junit.jupiter.api.Test;
 import org.leetcode.solution.Solution_1;
 import org.leetcode.solution.Solution_34;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 public class SolutionTest {
 
     /**
@@ -14,11 +11,11 @@ public class SolutionTest {
      */
     @Test
     void testSolution_1() {
+        System.out.printf("Solution_%04d: 两数之和\n", 1);
         int[] nums = new int[]{2,7,11,15};
         int target = 9;
         Solution_1 solution = new Solution_1();
         int[] res = solution.twoSum(nums, target);
-        System.out.println("two res is:" + String.join(",", Arrays.stream(res).mapToObj(String::valueOf).collect(Collectors.joining(", "))));
         Assertions.assertEquals(nums[res[0]] + nums[res[1]], target);
     }
 
@@ -28,6 +25,7 @@ public class SolutionTest {
      */
     @Test
     void testSolution_34() {
+        System.out.printf("Solution_%04d: 在排序数组中查找元素的第一个和最后一个位置\n", 34);
         int[] nums = new int[]{5,7,7,8,8,10};
         int target = 8;
         Solution_34 solution = new Solution_34();
