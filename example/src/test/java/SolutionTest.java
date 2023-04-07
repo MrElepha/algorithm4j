@@ -10,6 +10,7 @@ public class SolutionTest {
 
     /**
      * 两数之和
+     * @see org.leetcode.solution.Solution_1#twoSum
      */
     @Test
     void testSolution_1() {
@@ -23,6 +24,7 @@ public class SolutionTest {
 
     /**
      * 在排序数组中查找元素的第一个和最后一个位置
+     * @see org.leetcode.solution.Solution_34#searchRange
      */
     @Test
     void testSolution_34() {
