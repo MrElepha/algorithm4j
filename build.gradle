@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'org.leetcode'
 version '1.0-SNAPSHOT'
 reporting.baseDir = "./gradle/test-result"
 
