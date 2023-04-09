@@ -6,4 +6,4 @@
 ./gradlew test
 ```
 
-[刷题记录 & 测试报告](http://htmlpreview.github.io/?https://github.com/MrElepha/algorithm4j/blob/main/example/gradle/test-result/tests/test/classes/SolutionTest.html)
+[刷题记录 & 测试报告](http://htmlpreview.github.io/?https://github.com/MrElepha/algorithm4j/blob/main/gradle/test-result/tests/test/classes/LeetCodeSolutionTest.html)
