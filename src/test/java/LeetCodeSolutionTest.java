@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.leetcode.solution.Solution_1;
 import org.leetcode.solution.Solution_34;
+import org.leetcode.solution.Solution_704;
 
 public class LeetCodeSolutionTest {
 
@@ -39,5 +40,23 @@ public class LeetCodeSolutionTest {
         target = 6;
         res = solution.searchRange(nums, target);
         Assertions.assertTrue(res[0] == -1 && res[1] == -1);
+    }
+
+    /**
+     * 二分查找
+     * @see org.leetcode.solution.Solution_704#search
+     */
+    @Test
+    void testSolution_704() {
+        System.out.printf(formatSolutionLabel(704, "二分查找"));
+        int[] nums = new int[]{-1,0,3,5,9,12};
+        int target = 9;
+        Solution_704 solution = new Solution_704();
+        int res = solution.search(nums, target);
+        Assertions.assertEquals(res, 4);
+
+        target = 2;
+        res = solution.search(nums, target);
+        Assertions.assertEquals(res, -1);
     }
 }
