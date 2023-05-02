@@ -89,6 +89,28 @@ public class LeetCodeSolutionTest {
         Assertions.assertEquals(res, 4);
     }
 
+    /**
+     * 搜索二维矩阵
+     *
+     * @see org.leetcode.solution.Solution_74#searchMatrix
+     */
+    @Test
+    void testSolution_74() {
+        System.out.printf(formatSolutionLabel(74, "搜索二维矩阵"));
+        int[][] matrix = new int[][]{
+                {1, 3, 5, 7},
+                {10, 11, 16, 20},
+                {23, 30, 34, 60}
+        };
+        int target = 3;
+        Solution_74 solution = new Solution_74();
+        boolean res = solution.searchMatrix(matrix, target);
+        Assertions.assertTrue(res);
+
+        target = 13;
+        res = solution.searchMatrix(matrix, target);
+        Assertions.assertFalse(res);
+    }
 
     /**
      * 二叉树的中序遍历
