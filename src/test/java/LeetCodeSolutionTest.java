@@ -113,6 +113,31 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 搜索二维矩阵
+     *
+     * @see org.leetcode.solution.Solution_240#searchMatrix
+     */
+    @Test
+    void testSolution_240() {
+        System.out.printf(formatSolutionLabel(240, "搜索二维矩阵"));
+        int[][] matrix = new int[][]{
+                {1, 4, 7, 11, 15},
+                {2, 5, 8, 12, 19},
+                {3, 6, 9, 16, 22},
+                {10, 13, 14, 17, 24},
+                {18, 21, 23, 26, 30}
+        };
+        int target = 5;
+        Solution_240 solution = new Solution_240();
+        boolean res = solution.searchMatrix(matrix, target);
+        Assertions.assertTrue(res);
+
+        target = 20;
+        res = solution.searchMatrix(matrix, target);
+        Assertions.assertFalse(res);
+    }
+
+    /**
      * 二分查找
      *
      * @see org.leetcode.solution.Solution_704#search
