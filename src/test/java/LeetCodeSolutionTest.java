@@ -66,6 +66,29 @@ public class LeetCodeSolutionTest {
         Assertions.assertTrue(res[0] == -1 && res[1] == -1);
     }
 
+    /**
+     * 搜索插入位置
+     *
+     * @see org.leetcode.solution.Solution_35#searchInsert
+     */
+    @Test
+    void testSolution_35() {
+        System.out.printf(formatSolutionLabel(35, "搜索插入位置"));
+        int[] nums = new int[]{1, 3, 5, 6};
+        int target = 5;
+        Solution_35 solution = new Solution_35();
+        int res = solution.searchInsert(nums, target);
+        Assertions.assertEquals(res, 2);
+
+        target = 2;
+        res = solution.searchInsert(nums, target);
+        Assertions.assertEquals(res, 1);
+
+        target = 7;
+        res = solution.searchInsert(nums, target);
+        Assertions.assertEquals(res, 4);
+    }
+
 
     /**
      * 二叉树的中序遍历
