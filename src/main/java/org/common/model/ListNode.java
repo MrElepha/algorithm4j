@@ -1,4 +1,4 @@
-package org.leetcode.model;
+package org.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

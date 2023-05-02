@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.leetcode.solution.Solution_1;
+import org.leetcode.solution.Solution_33;
 import org.leetcode.solution.Solution_34;
 import org.leetcode.solution.Solution_704;
 
@@ -22,6 +23,24 @@ public class LeetCodeSolutionTest {
         Solution_1 solution = new Solution_1();
         int[] res = solution.twoSum(nums, target);
         Assertions.assertEquals(nums[res[0]] + nums[res[1]], target);
+    }
+
+    /**
+     * 搜索旋转排序数组
+     * @see org.leetcode.solution.Solution_33#search
+     */
+    @Test
+    void testSolution_33() {
+        System.out.printf(formatSolutionLabel(33, "搜索旋转排序数组"));
+        int[] nums = new int[]{4,5,6,7,0,1,2};
+        int target = 0;
+        Solution_33 solution = new Solution_33();
+        int res = solution.search(nums, target);
+        Assertions.assertEquals(4, res);
+
+        target = 3;
+        res = solution.search(nums, target);
+        Assertions.assertEquals(-1, res);
     }
 
     /**
