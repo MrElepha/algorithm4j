@@ -1,24 +1,17 @@
 package org.common.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 链表
  */
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class ListNode {
 
-    private int val;
-    private ListNode next;
+    public int val;
+    public ListNode next;
+
+    public ListNode() {}
 
     public ListNode(int val) {
         this.val = val;
@@ -31,8 +24,8 @@ public class ListNode {
         List<Integer> res = new ArrayList<>();
         ListNode tmp = this;
         do {
-            res.add(tmp.getVal());
-            tmp = tmp.getNext();
+            res.add(tmp.val);
+            tmp = tmp.next;
         } while (tmp != null);
 
         return res;
@@ -48,7 +41,7 @@ public class ListNode {
         ListNode cur = head;
         for (int item : input) {
             cur.next = new ListNode(item);
-            cur = cur.getNext();
+            cur = cur.next;
         }
         return head.next;
     }
