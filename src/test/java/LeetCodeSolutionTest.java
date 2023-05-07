@@ -90,6 +90,19 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 爬楼梯
+     *
+     * @see org.leetcode.solution.Solution_70#climbStairs
+     */
+    @Test
+    void testSolution_70() {
+        System.out.printf(formatSolutionLabel(70, "爬楼梯"));
+        Solution_70 solution = new Solution_70();
+        Assertions.assertEquals(solution.climbStairs(2), 2);
+        Assertions.assertEquals(solution.climbStairs(45), 1836311903);
+    }
+
+    /**
      * 搜索二维矩阵
      *
      * @see org.leetcode.solution.Solution_74#searchMatrix
