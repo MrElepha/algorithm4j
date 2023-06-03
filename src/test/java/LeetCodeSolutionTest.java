@@ -89,6 +89,21 @@ public class LeetCodeSolutionTest {
         Assertions.assertEquals(res, 4);
     }
 
+
+    /**
+     * x 的平方根
+     *
+     * @see org.leetcode.solution.Solution_69#mySqrt
+     */
+    @Test
+    void testSolution_69() {
+        System.out.printf(formatSolutionLabel(69, "x 的平方根"));
+        Solution_69 solution = new Solution_69();
+        Assertions.assertEquals(solution.mySqrt(4), 2);
+
+        Assertions.assertEquals(solution.mySqrt(8), 2);
+    }
+
     /**
      * 爬楼梯
      *
