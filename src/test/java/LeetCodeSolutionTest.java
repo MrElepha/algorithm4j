@@ -205,4 +205,18 @@ public class LeetCodeSolutionTest {
         res = solution.search(nums, target);
         Assertions.assertEquals(res, -1);
     }
+
+    /**
+     * 交替合并字符串
+     *
+     * @see org.leetcode.solution.Solution_1768#mergeAlternately
+     */
+    @Test
+    void testSolution_1768() {
+        System.out.printf(formatSolutionLabel(1768, "交替合并字符串"));
+        Solution_1768 solution = new Solution_1768();
+        Assertions.assertEquals(solution.mergeAlternately("abc", "pqr"), "apbqcr");
+        Assertions.assertEquals(solution.mergeAlternately("ab", "pqrs"), "apbqrs");
+        Assertions.assertEquals(solution.mergeAlternately("abcd", "pq"), "apbqcd");
+    }
 }
