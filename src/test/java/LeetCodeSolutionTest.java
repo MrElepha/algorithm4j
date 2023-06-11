@@ -188,6 +188,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 种花问题
+     *
+     * @see org.leetcode.solution.Solution_605#canPlaceFlowers
+     */
+    @Test
+    void testSolution_605() {
+        System.out.printf(formatSolutionLabel(605, "种花问题"));
+        int[] nums = new int[]{1,0,0,0,1};
+        Solution_605 solution = new Solution_605();
+        Assertions.assertTrue(solution.canPlaceFlowers(nums, 1));
+
+        Assertions.assertFalse(solution.canPlaceFlowers(nums, 2));
+    }
+    
+    /**
      * 二分查找
      *
      * @see org.leetcode.solution.Solution_704#search
