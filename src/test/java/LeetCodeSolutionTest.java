@@ -221,6 +221,24 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 拥有最多糖果的孩子
+     *
+     * @see org.leetcode.solution.Solution_1431#kidsWithCandies
+     */
+    @Test
+    void testSolution_1431() {
+        System.out.printf(formatSolutionLabel(1431, "拥有最多糖果的孩子"));
+        Solution_1431 solution = new Solution_1431();
+        int[] input = new int[]{2,3,5,1,3};
+        List<Boolean> res = solution.kidsWithCandies(input, 3);
+        Assertions.assertTrue(res.get(0));
+        Assertions.assertTrue(res.get(1));
+        Assertions.assertTrue(res.get(2));
+        Assertions.assertFalse(res.get(3));
+        Assertions.assertTrue(res.get(4));
+    }
+
+    /**
      * 交替合并字符串
      *
      * @see org.leetcode.solution.Solution_1768#mergeAlternately
