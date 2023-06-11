@@ -207,6 +207,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 字符串的最大公因子
+     *
+     * @see org.leetcode.solution.Solution_1071#gcdOfStrings
+     */
+    @Test
+    void testSolution_1071() {
+        System.out.printf(formatSolutionLabel(1071, "字符串的最大公因子"));
+        Solution_1071 solution = new Solution_1071();
+        Assertions.assertEquals(solution.gcdOfStrings("ABCABC", "ABC"), "ABC");
+        Assertions.assertEquals(solution.gcdOfStrings("ABABAB", "ABAB"), "AB");
+        Assertions.assertEquals(solution.gcdOfStrings("LEET", "CODE"), "");
+    }
+
+    /**
      * 交替合并字符串
      *
      * @see org.leetcode.solution.Solution_1768#mergeAlternately
