@@ -188,6 +188,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 反转字符串中的元音字母
+     *
+     * @see org.leetcode.solution.Solution_345#reverseVowels
+     */
+    @Test
+    void testSolution_345() {
+        System.out.printf(formatSolutionLabel(345, "反转字符串中的元音字母"));
+        Solution_345 solution = new Solution_345();
+        Assertions.assertEquals(solution.reverseVowels("hello"), "holle");
+        Assertions.assertEquals(solution.reverseVowels("leetcode"), "leotcede");
+    }
+
+
+    /**
      * 种花问题
      *
      * @see org.leetcode.solution.Solution_605#canPlaceFlowers
