@@ -163,6 +163,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 反转字符串中的单词
+     *
+     * @see org.leetcode.solution.Solution_151#reverseWords
+     */
+    @Test
+    void testSolution_151() {
+        System.out.printf(formatSolutionLabel(151, "反转字符串中的单词"));
+        Solution_151 solution = new Solution_151();
+        Assertions.assertEquals(solution.reverseWords("the sky is blue"), "blue is sky the");
+        Assertions.assertEquals(solution.reverseWords("  hello world  "), "world hello");
+        Assertions.assertEquals(solution.reverseWords("a good   example"), "example good a");
+    }
+
+    /**
      * 搜索二维矩阵
      *
      * @see org.leetcode.solution.Solution_240#searchMatrix
