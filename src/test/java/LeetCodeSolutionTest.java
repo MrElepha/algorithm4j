@@ -177,6 +177,29 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 除自身以外数组的乘积
+     *
+     * @see org.leetcode.solution.Solution_238#productExceptSelf
+     */
+    @Test
+    void testSolution_238() {
+        System.out.printf(formatSolutionLabel(238, "除自身以外数组的乘积"));
+        Solution_238 solution = new Solution_238();
+        int[] res = solution.productExceptSelf(new int[]{1,2,3,4});
+        Assertions.assertEquals(res[0], 24);
+        Assertions.assertEquals(res[1], 12);
+        Assertions.assertEquals(res[2], 8);
+        Assertions.assertEquals(res[3], 6);
+
+        res = solution.productExceptSelf(new int[]{-1,1,0,-3,3});
+        Assertions.assertEquals(res[0], 0);
+        Assertions.assertEquals(res[1], 0);
+        Assertions.assertEquals(res[2], 9);
+        Assertions.assertEquals(res[3], 0);
+        Assertions.assertEquals(res[4], 0);
+    }
+
+    /**
      * 搜索二维矩阵
      *
      * @see org.leetcode.solution.Solution_240#searchMatrix
