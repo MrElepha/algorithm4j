@@ -225,6 +225,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 递增的三元子序列
+     *
+     * @see org.leetcode.solution.Solution_334#increasingTriplet
+     */
+    @Test
+    void testSolution_334() {
+        System.out.printf(formatSolutionLabel(334, "递增的三元子序列"));
+        Solution_334 solution = new Solution_334();
+        Assertions.assertTrue(solution.increasingTriplet(new int[]{1,2,3,4,5}));
+        Assertions.assertFalse(solution.increasingTriplet(new int[]{5,4,3,2,1}));
+        Assertions.assertTrue(solution.increasingTriplet(new int[]{2,1,5,0,4,6}));
+    }
+
+    /**
      * 反转字符串中的元音字母
      *
      * @see org.leetcode.solution.Solution_345#reverseVowels
