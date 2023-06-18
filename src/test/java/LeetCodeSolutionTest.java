@@ -251,6 +251,19 @@ public class LeetCodeSolutionTest {
         Assertions.assertEquals(solution.reverseVowels("leetcode"), "leotcede");
     }
 
+    /**
+     * 压缩字符串
+     *
+     * @see org.leetcode.solution.Solution_443#compress
+     */
+    @Test
+    void testSolution_443() {
+        System.out.printf(formatSolutionLabel(443, "压缩字符串"));
+        Solution_443 solution = new Solution_443();
+        Assertions.assertEquals(solution.compress(new char[]{'a','a','b','b','c','c','c'}), 6);
+        Assertions.assertEquals(solution.compress(new char[]{'a'}), 1);
+        Assertions.assertEquals(solution.compress(new char[]{'a','b','b','b','b','b','b','b','b','b','b','b','b'}), 4);
+    }
 
     /**
      * 种花问题
