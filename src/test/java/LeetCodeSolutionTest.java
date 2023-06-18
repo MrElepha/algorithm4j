@@ -225,6 +225,25 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 移动零
+     *
+     * @see org.leetcode.solution.Solution_283#moveZeroes
+     */
+    @Test
+    void testSolution_283() {
+        System.out.printf(formatSolutionLabel(283, "移动零"));
+        Solution_283 solution = new Solution_283();
+
+        int[] res = new int[]{0,1,0,3,12};
+        solution.moveZeroes(res);
+        Assertions.assertArrayEquals(res, new int[]{1,3,12,0,0});
+
+        res = new int[]{0};
+        solution.moveZeroes(res);
+        Assertions.assertArrayEquals(res, new int[]{0});
+    }
+
+    /**
      * 递增的三元子序列
      *
      * @see org.leetcode.solution.Solution_334#increasingTriplet
