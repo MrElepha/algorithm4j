@@ -271,6 +271,19 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 判断子序列
+     *
+     * @see org.leetcode.solution.Solution_392#isSubsequence
+     */
+    @Test
+    void testSolution_392() {
+        System.out.printf(formatSolutionLabel(392, "判断子序列"));
+        Solution_392 solution = new Solution_392();
+        Assertions.assertTrue(solution.isSubsequence("abc", "ahbgdc"));
+        Assertions.assertFalse(solution.isSubsequence("axc", "ahbgdc"));
+    }
+
+    /**
      * 压缩字符串
      *
      * @see org.leetcode.solution.Solution_443#compress
