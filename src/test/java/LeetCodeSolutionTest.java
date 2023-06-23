@@ -29,6 +29,19 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 盛最多水的容器
+     *
+     * @see org.leetcode.solution.Solution_11#maxArea
+     */
+    @Test
+    void testSolution_11() {
+        System.out.printf(formatSolutionLabel(11, "盛最多水的容器"));
+        Solution_11 solution = new Solution_11();
+        Assertions.assertEquals(solution.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}), 49);
+        Assertions.assertEquals(solution.maxArea(new int[]{1, 1}), 1);
+    }
+
+    /**
      * 搜索旋转排序数组
      *
      * @see org.leetcode.solution.Solution_33#search
@@ -185,13 +198,13 @@ public class LeetCodeSolutionTest {
     void testSolution_238() {
         System.out.printf(formatSolutionLabel(238, "除自身以外数组的乘积"));
         Solution_238 solution = new Solution_238();
-        int[] res = solution.productExceptSelf(new int[]{1,2,3,4});
+        int[] res = solution.productExceptSelf(new int[]{1, 2, 3, 4});
         Assertions.assertEquals(res[0], 24);
         Assertions.assertEquals(res[1], 12);
         Assertions.assertEquals(res[2], 8);
         Assertions.assertEquals(res[3], 6);
 
-        res = solution.productExceptSelf(new int[]{-1,1,0,-3,3});
+        res = solution.productExceptSelf(new int[]{-1, 1, 0, -3, 3});
         Assertions.assertEquals(res[0], 0);
         Assertions.assertEquals(res[1], 0);
         Assertions.assertEquals(res[2], 9);
@@ -234,9 +247,9 @@ public class LeetCodeSolutionTest {
         System.out.printf(formatSolutionLabel(283, "移动零"));
         Solution_283 solution = new Solution_283();
 
-        int[] res = new int[]{0,1,0,3,12};
+        int[] res = new int[]{0, 1, 0, 3, 12};
         solution.moveZeroes(res);
-        Assertions.assertArrayEquals(res, new int[]{1,3,12,0,0});
+        Assertions.assertArrayEquals(res, new int[]{1, 3, 12, 0, 0});
 
         res = new int[]{0};
         solution.moveZeroes(res);
@@ -252,9 +265,9 @@ public class LeetCodeSolutionTest {
     void testSolution_334() {
         System.out.printf(formatSolutionLabel(334, "递增的三元子序列"));
         Solution_334 solution = new Solution_334();
-        Assertions.assertTrue(solution.increasingTriplet(new int[]{1,2,3,4,5}));
-        Assertions.assertFalse(solution.increasingTriplet(new int[]{5,4,3,2,1}));
-        Assertions.assertTrue(solution.increasingTriplet(new int[]{2,1,5,0,4,6}));
+        Assertions.assertTrue(solution.increasingTriplet(new int[]{1, 2, 3, 4, 5}));
+        Assertions.assertFalse(solution.increasingTriplet(new int[]{5, 4, 3, 2, 1}));
+        Assertions.assertTrue(solution.increasingTriplet(new int[]{2, 1, 5, 0, 4, 6}));
     }
 
     /**
@@ -292,9 +305,9 @@ public class LeetCodeSolutionTest {
     void testSolution_443() {
         System.out.printf(formatSolutionLabel(443, "压缩字符串"));
         Solution_443 solution = new Solution_443();
-        Assertions.assertEquals(solution.compress(new char[]{'a','a','b','b','c','c','c'}), 6);
+        Assertions.assertEquals(solution.compress(new char[]{'a', 'a', 'b', 'b', 'c', 'c', 'c'}), 6);
         Assertions.assertEquals(solution.compress(new char[]{'a'}), 1);
-        Assertions.assertEquals(solution.compress(new char[]{'a','b','b','b','b','b','b','b','b','b','b','b','b'}), 4);
+        Assertions.assertEquals(solution.compress(new char[]{'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'}), 4);
     }
 
     /**
@@ -305,13 +318,13 @@ public class LeetCodeSolutionTest {
     @Test
     void testSolution_605() {
         System.out.printf(formatSolutionLabel(605, "种花问题"));
-        int[] nums = new int[]{1,0,0,0,1};
+        int[] nums = new int[]{1, 0, 0, 0, 1};
         Solution_605 solution = new Solution_605();
         Assertions.assertTrue(solution.canPlaceFlowers(nums, 1));
 
         Assertions.assertFalse(solution.canPlaceFlowers(nums, 2));
     }
-    
+
     /**
      * 二分查找
      *
@@ -354,7 +367,7 @@ public class LeetCodeSolutionTest {
     void testSolution_1431() {
         System.out.printf(formatSolutionLabel(1431, "拥有最多糖果的孩子"));
         Solution_1431 solution = new Solution_1431();
-        int[] input = new int[]{2,3,5,1,3};
+        int[] input = new int[]{2, 3, 5, 1, 3};
         List<Boolean> res = solution.kidsWithCandies(input, 3);
         Assertions.assertTrue(res.get(0));
         Assertions.assertTrue(res.get(1));
