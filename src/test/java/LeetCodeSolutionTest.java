@@ -377,6 +377,19 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * K 和数对的最大数目
+     *
+     * @see org.leetcode.solution.Solution_1679#maxOperations
+     */
+    @Test
+    void testSolution_1679() {
+        System.out.printf(formatSolutionLabel(1679, "K 和数对的最大数目"));
+        Solution_1679 solution = new Solution_1679();
+        Assertions.assertEquals(solution.maxOperations(new int[]{1,2,3,4}, 5), 2);
+        Assertions.assertEquals(solution.maxOperations(new int[]{3,1,3,4,3}, 6), 1);
+    }
+
+    /**
      * 交替合并字符串
      *
      * @see org.leetcode.solution.Solution_1768#mergeAlternately
