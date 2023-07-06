@@ -391,6 +391,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 定长子串中元音的最大数目
+     *
+     * @see org.leetcode.solution.Solution_1456#maxVowels
+     */
+    @Test
+    void testSolution_1456() {
+        System.out.printf(formatSolutionLabel(1456, "定长子串中元音的最大数目"));
+        Solution_1456 solution = new Solution_1456();
+        Assertions.assertEquals(solution.maxVowels("abciiidef", 3), 3);
+        Assertions.assertEquals(solution.maxVowels("aeiou", 2), 2);
+        Assertions.assertEquals(solution.maxVowels("leetcode", 3), 2);
+        Assertions.assertEquals(solution.maxVowels("rhythms", 4), 0);
+    }
+
+    /**
      * K 和数对的最大数目
      *
      * @see org.leetcode.solution.Solution_1679#maxOperations
