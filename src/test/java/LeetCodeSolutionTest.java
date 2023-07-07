@@ -359,6 +359,26 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 最大连续1的个数 III
+     *
+     * @see org.leetcode.solution.Solution_1004#longestOnes
+     */
+    @Test
+    void testSolution_1004() {
+        System.out.printf(formatSolutionLabel(1004, "最大连续1的个数 III"));
+        Solution_1004 solution = new Solution_1004();
+        Assertions.assertEquals(
+                solution.longestOnes(new int[]{1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0}, 2),
+                6
+        );
+
+        Assertions.assertEquals(
+                solution.longestOnes(new int[]{0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1}, 3),
+                10
+        );
+    }
+
+    /**
      * 字符串的最大公因子
      *
      * @see org.leetcode.solution.Solution_1071#gcdOfStrings
