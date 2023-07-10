@@ -434,9 +434,9 @@ public class LeetCodeSolutionTest {
     void testSolution_1493() {
         System.out.printf(formatSolutionLabel(1493, "删掉一个元素以后全为 1 的最长子数组"));
         Solution_1493 solution = new Solution_1493();
-        Assertions.assertEquals(solution.longestSubarray(new int[]{1,1,0,1}), 3);
+        Assertions.assertEquals(solution.longestSubarray(new int[]{1, 1, 0, 1}), 3);
         Assertions.assertEquals(solution.longestSubarray(new int[]{0, 1, 1, 1, 0, 1, 1, 0, 1}), 5);
-        Assertions.assertEquals(solution.longestSubarray(new int[]{1,1,1}), 2);
+        Assertions.assertEquals(solution.longestSubarray(new int[]{1, 1, 1}), 2);
     }
 
     /**
@@ -450,6 +450,18 @@ public class LeetCodeSolutionTest {
         Solution_1679 solution = new Solution_1679();
         Assertions.assertEquals(solution.maxOperations(new int[]{1, 2, 3, 4}, 5), 2);
         Assertions.assertEquals(solution.maxOperations(new int[]{3, 1, 3, 4, 3}, 6), 1);
+    }
+
+    /**
+     * 找到最高海拔
+     *
+     * @see org.leetcode.solution.Solution_1732#largestAltitude
+     */
+    @Test
+    void testSolution_1732() {
+        System.out.printf(formatSolutionLabel(1732, "找到最高海拔"));
+        Solution_1732 solution = new Solution_1732();
+        Assertions.assertEquals(solution.largestAltitude(new int[]{-5, 1, 5, 0, -7}), 1);
     }
 
     /**
