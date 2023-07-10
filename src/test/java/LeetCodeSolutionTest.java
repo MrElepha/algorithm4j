@@ -426,6 +426,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 删掉一个元素以后全为 1 的最长子数组
+     *
+     * @see org.leetcode.solution.Solution_1493#longestSubarray
+     */
+    @Test
+    void testSolution_1493() {
+        System.out.printf(formatSolutionLabel(1493, "删掉一个元素以后全为 1 的最长子数组"));
+        Solution_1493 solution = new Solution_1493();
+        Assertions.assertEquals(solution.longestSubarray(new int[]{1,1,0,1}), 3);
+        Assertions.assertEquals(solution.longestSubarray(new int[]{0, 1, 1, 1, 0, 1, 1, 0, 1}), 5);
+        Assertions.assertEquals(solution.longestSubarray(new int[]{1,1,1}), 2);
+    }
+
+    /**
      * K 和数对的最大数目
      *
      * @see org.leetcode.solution.Solution_1679#maxOperations
