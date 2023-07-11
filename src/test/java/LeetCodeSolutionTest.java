@@ -492,4 +492,18 @@ public class LeetCodeSolutionTest {
         Assertions.assertEquals(solution.mergeAlternately("ab", "pqrs"), "apbqrs");
         Assertions.assertEquals(solution.mergeAlternately("abcd", "pq"), "apbqcd");
     }
+
+    /**
+     * 找出两数组的不同
+     *
+     * @see org.leetcode.solution.Solution_2215#findDifference
+     */
+    @Test
+    void testSolution_2215() {
+        System.out.printf(formatSolutionLabel(2215, "找出两数组的不同"));
+        Solution_2215 solution = new Solution_2215();
+        List<List<Integer>> res = solution.findDifference(new int[]{1, 2, 3}, new int[]{2, 4, 6});
+        Assertions.assertArrayEquals(res.get(0).toArray(new Integer[0]), new Integer[]{1, 3});
+        Assertions.assertArrayEquals(res.get(1).toArray(new Integer[0]), new Integer[]{4, 6});
+    }
 }
