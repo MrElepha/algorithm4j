@@ -359,6 +359,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 寻找数组的中心下标
+     *
+     * @see org.leetcode.solution.Solution_724#pivotIndex
+     */
+    @Test
+    void testSolution_724() {
+        System.out.printf(formatSolutionLabel(724, "寻找数组的中心下标"));
+
+        Solution_724 solution = new Solution_724();
+        Assertions.assertEquals(solution.pivotIndex(new int[]{1, 7, 3, 6, 5, 6}), 3);
+        Assertions.assertEquals(solution.pivotIndex(new int[]{1, 2, 3}), -1);
+        Assertions.assertEquals(solution.pivotIndex(new int[]{2, 1, -1}), 0);
+    }
+
+    /**
      * 最大连续1的个数 III
      *
      * @see org.leetcode.solution.Solution_1004#longestOnes
