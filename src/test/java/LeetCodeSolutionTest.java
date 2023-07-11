@@ -408,6 +408,18 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 独一无二的出现次数
+     *
+     * @see org.leetcode.solution.Solution_1207#uniqueOccurrences
+     */
+    @Test
+    void testSolution_1207() {
+        System.out.printf(formatSolutionLabel(1207, "独一无二的出现次数"));
+        Solution_1207 solution = new Solution_1207();
+        Assertions.assertTrue(solution.uniqueOccurrences(new int[]{1, 2, 2, 1, 1, 3}));
+    }
+
+    /**
      * 拥有最多糖果的孩子
      *
      * @see org.leetcode.solution.Solution_1431#kidsWithCandies
