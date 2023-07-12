@@ -467,6 +467,19 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 确定两个字符串是否接近
+     *
+     * @see org.leetcode.solution.Solution_1657#closeStrings
+     */
+    @Test
+    void testSolution_1657() {
+        System.out.printf(formatSolutionLabel(1657, "确定两个字符串是否接近"));
+        Solution_1657 solution = new Solution_1657();
+        Assertions.assertTrue(solution.closeStrings("cabbba", "abbccc"));
+        Assertions.assertFalse(solution.closeStrings("cabbba", "aabbss"));
+    }
+
+    /**
      * K 和数对的最大数目
      *
      * @see org.leetcode.solution.Solution_1679#maxOperations
