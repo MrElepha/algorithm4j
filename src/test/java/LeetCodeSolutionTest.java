@@ -531,4 +531,23 @@ public class LeetCodeSolutionTest {
         Assertions.assertArrayEquals(res.get(0).toArray(new Integer[0]), new Integer[]{1, 3});
         Assertions.assertArrayEquals(res.get(1).toArray(new Integer[0]), new Integer[]{4, 6});
     }
+
+    /**
+     * 相等行列对
+     *
+     * @see org.leetcode.solution.Solution_2352#equalPairs
+     */
+    @Test
+    void testSolution_2352() {
+        System.out.printf(formatSolutionLabel(2352, "相等行列对"));
+        Solution_2352 solution = new Solution_2352();
+        Assertions.assertEquals(3, solution.equalPairs(
+                new int[][]{
+                        {3, 1, 2, 2},
+                        {1, 4, 4, 5},
+                        {2, 4, 2, 2},
+                        {2, 4, 2, 2}
+                }
+        ));
+    }
 }
