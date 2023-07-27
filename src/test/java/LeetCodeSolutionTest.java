@@ -550,4 +550,17 @@ public class LeetCodeSolutionTest {
                 }
         ));
     }
+
+    /**
+     * 从字符串中移除星号
+     *
+     * @see org.leetcode.solution.Solution_2390#removeStars
+     */
+    @Test
+    void testSolution_2390() {
+        System.out.printf(formatSolutionLabel(2390, "从字符串中移除星号"));
+        Solution_2390 solution = new Solution_2390();
+        Assertions.assertEquals("lecoe", solution.removeStars("leet**cod*e"));
+        Assertions.assertEquals("", solution.removeStars("erase*****"));
+    }
 }
