@@ -374,6 +374,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 行星碰撞
+     *
+     * @see org.leetcode.solution.Solution_735#asteroidCollision
+     */
+    @Test
+    void testSolution_735() {
+        System.out.printf(formatSolutionLabel(735, "行星碰撞"));
+
+        Solution_735 solution = new Solution_735();
+        Assertions.assertArrayEquals(solution.asteroidCollision(new int[]{5, 10, -5}), new int[]{5, 10});
+        Assertions.assertArrayEquals(solution.asteroidCollision(new int[]{8, -8}), new int[]{});
+        Assertions.assertArrayEquals(solution.asteroidCollision(new int[]{10, 2, -5}), new int[]{10});
+    }
+
+    /**
      * 最大连续1的个数 III
      *
      * @see org.leetcode.solution.Solution_1004#longestOnes
