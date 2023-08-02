@@ -297,6 +297,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 字符串解码
+     *
+     * @see org.leetcode.solution.Solution_394#decodeString
+     */
+    @Test
+    void testSolution_394() {
+        System.out.printf(formatSolutionLabel(394, "字符串解码"));
+        Solution_394 solution = new Solution_394();
+        Assertions.assertEquals(solution.decodeString("3[a]2[bc]"), "aaabcbc");
+        Assertions.assertEquals(solution.decodeString("3[a2[c]]"), "accaccacc");
+        Assertions.assertEquals(solution.decodeString("2[abc]3[cd]ef"), "abcabccdcdcdef");
+        Assertions.assertEquals(solution.decodeString("abc3[cd]xyz"), "abccdcdcdxyz");
+    }
+
+    /**
      * 压缩字符串
      *
      * @see org.leetcode.solution.Solution_443#compress
