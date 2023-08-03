@@ -404,6 +404,25 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 最近的请求次数
+     *
+     * @see org.leetcode.solution.Solution_933
+     */
+    @Test
+    void testSolution_933() {
+        System.out.printf(formatSolutionLabel(933, "最近的请求次数"));
+
+        Solution_933.RecentCounter recentCounter = new Solution_933.RecentCounter();
+        int[] res = new int[]{
+                recentCounter.ping(1),
+                recentCounter.ping(100),
+                recentCounter.ping(3001),
+                recentCounter.ping(3002),
+        };
+        Assertions.assertArrayEquals(res, new int[]{1, 2, 3, 3});
+    }
+
+    /**
      * 最大连续1的个数 III
      *
      * @see org.leetcode.solution.Solution_1004#longestOnes
