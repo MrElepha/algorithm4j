@@ -355,6 +355,19 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * Dota2 参议院
+     *
+     * @see org.leetcode.solution.Solution_649#predictPartyVictory
+     */
+    @Test
+    void testSolution_649() {
+        System.out.printf(formatSolutionLabel(649, "Dota2 参议院"));
+        Solution_649 solution = new Solution_649();
+        Assertions.assertEquals(solution.predictPartyVictory("RD"), "Radiant");
+        Assertions.assertEquals(solution.predictPartyVictory("RDD"), "Dire");
+    }
+
+    /**
      * 二分查找
      *
      * @see org.leetcode.solution.Solution_704#search
