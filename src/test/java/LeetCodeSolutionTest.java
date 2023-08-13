@@ -1,3 +1,4 @@
+import org.common.model.ListNode;
 import org.common.model.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -578,6 +579,19 @@ public class LeetCodeSolutionTest {
         Assertions.assertEquals(solution.mergeAlternately("abc", "pqr"), "apbqcr");
         Assertions.assertEquals(solution.mergeAlternately("ab", "pqrs"), "apbqrs");
         Assertions.assertEquals(solution.mergeAlternately("abcd", "pq"), "apbqcd");
+    }
+
+    /**
+     * 删除链表的中间节点
+     *
+     * @see org.leetcode.solution.Solution_2095#deleteMiddle
+     */
+    @Test
+    void testSolution_2095() {
+        System.out.printf(formatSolutionLabel(2095, "删除链表的中间节点"));
+        Solution_2095 solution = new Solution_2095();
+        ListNode input = ListNode.init(Arrays.asList(1, 3, 4, 7, 1, 2, 6));
+        Assertions.assertArrayEquals(solution.deleteMiddle(input).print().toArray(new Integer[0]), new Integer[]{1, 3, 4, 1, 2, 6});
     }
 
     /**
