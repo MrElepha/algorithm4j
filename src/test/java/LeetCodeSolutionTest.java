@@ -191,6 +191,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 反转链表
+     *
+     * @see org.leetcode.solution.Solution_206#reverseList
+     */
+    @Test
+    void testSolution_206() {
+        System.out.printf(formatSolutionLabel(206, "反转链表"));
+        Solution_206 solution = new Solution_206();
+        Assertions.assertArrayEquals(
+                solution.reverseList(ListNode.init(Arrays.asList(1, 2, 3, 4, 5))).print().toArray(new Integer[0]),
+                ListNode.init(Arrays.asList(5, 4, 3, 2, 1)).print().toArray(new Integer[0])
+        );
+    }
+
+    /**
      * 除自身以外数组的乘积
      *
      * @see org.leetcode.solution.Solution_238#productExceptSelf
