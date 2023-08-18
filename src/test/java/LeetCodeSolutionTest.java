@@ -7,6 +7,8 @@ import org.leetcode.solution.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class LeetCodeSolutionTest {
 
@@ -199,9 +201,9 @@ public class LeetCodeSolutionTest {
     void testSolution_206() {
         System.out.printf(formatSolutionLabel(206, "反转链表"));
         Solution_206 solution = new Solution_206();
-        Assertions.assertArrayEquals(
-                solution.reverseList(ListNode.init(Arrays.asList(1, 2, 3, 4, 5))).print().toArray(new Integer[0]),
-                ListNode.init(Arrays.asList(5, 4, 3, 2, 1)).print().toArray(new Integer[0])
+        Assertions.assertLinesMatch(
+                solution.reverseList(ListNode.init(Arrays.asList(1, 2, 3, 4, 5))).print(),
+                ListNode.init(Arrays.asList(5, 4, 3, 2, 1)).print()
         );
     }
 
@@ -270,6 +272,21 @@ public class LeetCodeSolutionTest {
         res = new int[]{0};
         solution.moveZeroes(res);
         Assertions.assertArrayEquals(res, new int[]{0});
+    }
+
+    /**
+     * 奇偶链表
+     *
+     * @see org.leetcode.solution.Solution_328#oddEvenList
+     */
+    @Test
+    void testSolution_328() {
+        System.out.printf(formatSolutionLabel(328, "奇偶链表"));
+        Solution_328 solution = new Solution_328();
+        Assertions.assertLinesMatch(
+                solution.oddEvenList(ListNode.init(Arrays.asList(1, 2, 3, 4, 5))).print(),
+                ListNode.init(Arrays.asList(1, 3, 5, 2, 4)).print()
+        );
     }
 
     /**
@@ -606,7 +623,10 @@ public class LeetCodeSolutionTest {
         System.out.printf(formatSolutionLabel(2095, "删除链表的中间节点"));
         Solution_2095 solution = new Solution_2095();
         ListNode input = ListNode.init(Arrays.asList(1, 3, 4, 7, 1, 2, 6));
-        Assertions.assertArrayEquals(solution.deleteMiddle(input).print().toArray(new Integer[0]), new Integer[]{1, 3, 4, 1, 2, 6});
+        Assertions.assertLinesMatch(
+                solution.deleteMiddle(input).print(),
+                Stream.of(1, 3, 4, 1, 2, 6).map(String::valueOf).collect(Collectors.toList())
+        );
     }
 
     /**

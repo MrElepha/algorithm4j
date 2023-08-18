@@ -11,7 +11,7 @@ public class ModelTest {
     @Test
     void testListNode() {
         ListNode node = ListNode.init(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
-        List<Integer> printRes = node.print();
+        List<String> printRes = node.print();
         System.out.printf("list node init res: %s \n", printRes);
         Assertions.assertEquals(printRes.size(), 7);
     }

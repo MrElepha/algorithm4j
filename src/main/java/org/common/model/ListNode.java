@@ -11,7 +11,8 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    public ListNode() {}
+    public ListNode() {
+    }
 
     public ListNode(int val) {
         this.val = val;
@@ -20,11 +21,11 @@ public class ListNode {
     /**
      * 格式化输出
      */
-    public List<Integer> print() {
-        List<Integer> res = new ArrayList<>();
+    public List<String> print() {
+        List<String> res = new ArrayList<>();
         ListNode tmp = this;
         do {
-            res.add(tmp.val);
+            res.add(String.valueOf(tmp.val));
             tmp = tmp.next;
         } while (tmp != null);
 
