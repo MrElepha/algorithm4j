@@ -630,6 +630,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 链表最大孪生和
+     *
+     * @see org.leetcode.solution.Solution_2130#pairSum
+     */
+    @Test
+    void testSolution_2130() {
+        System.out.printf(formatSolutionLabel(2130, "链表最大孪生和"));
+        Solution_2130 solution = new Solution_2130();
+        ListNode input = ListNode.init(Arrays.asList(5, 4, 2, 1));
+        Assertions.assertEquals(solution.pairSum1(input), 6);
+        Assertions.assertEquals(solution.pairSum(input), 6);
+    }
+
+    /**
      * 找出两数组的不同
      *
      * @see org.leetcode.solution.Solution_2215#findDifference
