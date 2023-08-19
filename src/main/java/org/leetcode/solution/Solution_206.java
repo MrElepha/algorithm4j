@@ -7,6 +7,7 @@ import org.common.model.ListNode;
  */
 public class Solution_206 {
 
+    // 头插法
     public ListNode reverseList(ListNode head) {
         ListNode dummy = new ListNode(-1);
         ListNode cur = head;
@@ -17,5 +18,17 @@ public class Solution_206 {
             cur = tmp;
         }
         return dummy.next;
+    }
+
+    public ListNode reverseList1(ListNode head) {
+        ListNode cur = head;
+        ListNode prev = null;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+        return prev;
     }
 }
