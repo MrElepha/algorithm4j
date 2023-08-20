@@ -214,7 +214,7 @@ public class LeetCodeSolutionTest {
     void testSolution_206() {
         System.out.printf(formatSolutionLabel(206, "反转链表"));
         Solution_206 solution = new Solution_206();
-        Assertions.assertLinesMatch(
+        Assertions.assertEquals(
                 solution.reverseList(ListNode.init(Arrays.asList(1, 2, 3, 4, 5))).print(),
                 ListNode.init(Arrays.asList(5, 4, 3, 2, 1)).print()
         );
@@ -296,7 +296,7 @@ public class LeetCodeSolutionTest {
     void testSolution_328() {
         System.out.printf(formatSolutionLabel(328, "奇偶链表"));
         Solution_328 solution = new Solution_328();
-        Assertions.assertLinesMatch(
+        Assertions.assertEquals(
                 solution.oddEvenList(ListNode.init(Arrays.asList(1, 2, 3, 4, 5))).print(),
                 ListNode.init(Arrays.asList(1, 3, 5, 2, 4)).print()
         );
@@ -460,6 +460,26 @@ public class LeetCodeSolutionTest {
         Assertions.assertArrayEquals(solution.asteroidCollision(new int[]{5, 10, -5}), new int[]{5, 10});
         Assertions.assertArrayEquals(solution.asteroidCollision(new int[]{8, -8}), new int[]{});
         Assertions.assertArrayEquals(solution.asteroidCollision(new int[]{10, 2, -5}), new int[]{10});
+    }
+
+    /**
+     * 叶子相似的树
+     *
+     * @see org.leetcode.solution.Solution_872#leafSimilar
+     */
+    @Test
+    void testSolution_872() {
+        System.out.printf(formatSolutionLabel(872, "叶子相似的树"));
+
+        Solution_872 solution = new Solution_872();
+        Assertions.assertTrue(solution.leafSimilar(
+                TreeNode.init(Arrays.asList(3, 5, 1, 6, 2, 9, 8, null, null, 7, 4)),
+                TreeNode.init(Arrays.asList(3, 5, 1, 6, 7, 4, 2, null, null, null, null, null, null, 9, 8))
+        ));
+        Assertions.assertFalse(solution.leafSimilar(
+                TreeNode.init(Arrays.asList(1, 2, 3)),
+                TreeNode.init(Arrays.asList(1, 3, 2))
+        ));
     }
 
     /**
@@ -636,9 +656,9 @@ public class LeetCodeSolutionTest {
         System.out.printf(formatSolutionLabel(2095, "删除链表的中间节点"));
         Solution_2095 solution = new Solution_2095();
         ListNode input = ListNode.init(Arrays.asList(1, 3, 4, 7, 1, 2, 6));
-        Assertions.assertLinesMatch(
+        Assertions.assertEquals(
                 solution.deleteMiddle(input).print(),
-                Stream.of(1, 3, 4, 1, 2, 6).map(String::valueOf).collect(Collectors.toList())
+                Arrays.asList(1, 3, 4, 1, 2, 6)
         );
     }
 

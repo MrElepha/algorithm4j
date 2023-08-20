@@ -21,11 +21,11 @@ public class ListNode {
     /**
      * 格式化输出
      */
-    public List<String> print() {
-        List<String> res = new ArrayList<>();
+    public List<Integer> print() {
+        List<Integer> res = new ArrayList<>();
         ListNode tmp = this;
         do {
-            res.add(String.valueOf(tmp.val));
+            res.add(tmp.val);
             tmp = tmp.next;
         } while (tmp != null);
 
