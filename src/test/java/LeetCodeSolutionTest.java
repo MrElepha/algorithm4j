@@ -179,6 +179,19 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 二叉树的最大深度
+     *
+     * @see org.leetcode.solution.Solution_104#maxDepth
+     */
+    @Test
+    void testSolution_104() {
+        System.out.printf(formatSolutionLabel(104, "二叉树的最大深度"));
+        Solution_104 solution = new Solution_104();
+        Assertions.assertEquals(solution.maxDepth(TreeNode.init(Arrays.asList(3, 9, 20, null, null, 15, 7))), 3);
+        Assertions.assertEquals(solution.maxDepth(TreeNode.init(Arrays.asList(1, null, 2))), 2);
+    }
+
+    /**
      * 反转字符串中的单词
      *
      * @see org.leetcode.solution.Solution_151#reverseWords
