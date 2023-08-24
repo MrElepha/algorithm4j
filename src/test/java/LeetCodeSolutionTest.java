@@ -566,6 +566,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 统计二叉树中好节点的数目
+     *
+     * @see org.leetcode.solution.Solution_1448#goodNodes
+     */
+    @Test
+    void testSolution_1448() {
+        System.out.printf(formatSolutionLabel(1448, "统计二叉树中好节点的数目"));
+        Solution_1448 solution = new Solution_1448();
+        Assertions.assertEquals(solution.goodNodes(TreeNode.init(Arrays.asList(3, 1, 4, 3, null, 1, 5))), 4);
+        Assertions.assertEquals(solution.goodNodes(TreeNode.init(Arrays.asList(3, 3, null, 4, 2))), 3);
+        Assertions.assertEquals(solution.goodNodes(TreeNode.init(Collections.singletonList(1))), 1);
+    }
+
+    /**
      * 定长子串中元音的最大数目
      *
      * @see org.leetcode.solution.Solution_1456#maxVowels
