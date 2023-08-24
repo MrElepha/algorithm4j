@@ -1,15 +1,13 @@
 import org.common.model.ListNode;
 import org.common.model.TreeNode;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.leetcode.solution.*;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LeetCodeSolutionTest {
 
     private static String formatSolutionLabel(int solutionNum, String solutionTitle) {
@@ -22,6 +20,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1#twoSum
      */
     @Test
+    @Order(1)
     void testSolution_1() {
         System.out.printf(formatSolutionLabel(1, "两数之和"));
         int[] nums = new int[]{2, 7, 11, 15};
@@ -37,6 +36,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_11#maxArea
      */
     @Test
+    @Order(11)
     void testSolution_11() {
         System.out.printf(formatSolutionLabel(11, "盛最多水的容器"));
         Solution_11 solution = new Solution_11();
@@ -50,6 +50,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_33#search
      */
     @Test
+    @Order(33)
     void testSolution_33() {
         System.out.printf(formatSolutionLabel(33, "搜索旋转排序数组"));
         int[] nums = new int[]{4, 5, 6, 7, 0, 1, 2};
@@ -69,6 +70,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_34#searchRange
      */
     @Test
+    @Order(34)
     void testSolution_34() {
         System.out.printf(formatSolutionLabel(34, "在排序数组中查找元素的第一个和最后一个位置"));
         int[] nums = new int[]{5, 7, 7, 8, 8, 10};
@@ -88,6 +90,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_35#searchInsert
      */
     @Test
+    @Order(35)
     void testSolution_35() {
         System.out.printf(formatSolutionLabel(35, "搜索插入位置"));
         int[] nums = new int[]{1, 3, 5, 6};
@@ -112,6 +115,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_69#mySqrt
      */
     @Test
+    @Order(69)
     void testSolution_69() {
         System.out.printf(formatSolutionLabel(69, "x 的平方根"));
         Solution_69 solution = new Solution_69();
@@ -126,6 +130,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_70#climbStairs
      */
     @Test
+    @Order(70)
     void testSolution_70() {
         System.out.printf(formatSolutionLabel(70, "爬楼梯"));
         Solution_70 solution = new Solution_70();
@@ -139,6 +144,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_74#searchMatrix
      */
     @Test
+    @Order(74)
     void testSolution_74() {
         System.out.printf(formatSolutionLabel(74, "搜索二维矩阵"));
         int[][] matrix = new int[][]{
@@ -162,6 +168,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_94#inorderTraversal
      */
     @Test
+    @Order(94)
     void testSolution_94() {
         System.out.printf(formatSolutionLabel(94, "二叉树的中序遍历"));
         List<Integer> input = Arrays.asList(1, null, 2, 3);
@@ -184,6 +191,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_104#maxDepth
      */
     @Test
+    @Order(104)
     void testSolution_104() {
         System.out.printf(formatSolutionLabel(104, "二叉树的最大深度"));
         Solution_104 solution = new Solution_104();
@@ -197,6 +205,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_151#reverseWords
      */
     @Test
+    @Order(151)
     void testSolution_151() {
         System.out.printf(formatSolutionLabel(151, "反转字符串中的单词"));
         Solution_151 solution = new Solution_151();
@@ -211,6 +220,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_206#reverseList
      */
     @Test
+    @Order(206)
     void testSolution_206() {
         System.out.printf(formatSolutionLabel(206, "反转链表"));
         Solution_206 solution = new Solution_206();
@@ -226,6 +236,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_238#productExceptSelf
      */
     @Test
+    @Order(238)
     void testSolution_238() {
         System.out.printf(formatSolutionLabel(238, "除自身以外数组的乘积"));
         Solution_238 solution = new Solution_238();
@@ -249,6 +260,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_240#searchMatrix
      */
     @Test
+    @Order(240)
     void testSolution_240() {
         System.out.printf(formatSolutionLabel(240, "搜索二维矩阵"));
         int[][] matrix = new int[][]{
@@ -274,6 +286,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_283#moveZeroes
      */
     @Test
+    @Order(283)
     void testSolution_283() {
         System.out.printf(formatSolutionLabel(283, "移动零"));
         Solution_283 solution = new Solution_283();
@@ -293,6 +306,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_328#oddEvenList
      */
     @Test
+    @Order(328)
     void testSolution_328() {
         System.out.printf(formatSolutionLabel(328, "奇偶链表"));
         Solution_328 solution = new Solution_328();
@@ -308,6 +322,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_334#increasingTriplet
      */
     @Test
+    @Order(334)
     void testSolution_334() {
         System.out.printf(formatSolutionLabel(334, "递增的三元子序列"));
         Solution_334 solution = new Solution_334();
@@ -322,6 +337,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_345#reverseVowels
      */
     @Test
+    @Order(345)
     void testSolution_345() {
         System.out.printf(formatSolutionLabel(345, "反转字符串中的元音字母"));
         Solution_345 solution = new Solution_345();
@@ -335,6 +351,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_392#isSubsequence
      */
     @Test
+    @Order(392)
     void testSolution_392() {
         System.out.printf(formatSolutionLabel(392, "判断子序列"));
         Solution_392 solution = new Solution_392();
@@ -348,6 +365,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_394#decodeString
      */
     @Test
+    @Order(394)
     void testSolution_394() {
         System.out.printf(formatSolutionLabel(394, "字符串解码"));
         Solution_394 solution = new Solution_394();
@@ -363,6 +381,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_443#compress
      */
     @Test
+    @Order(443)
     void testSolution_443() {
         System.out.printf(formatSolutionLabel(443, "压缩字符串"));
         Solution_443 solution = new Solution_443();
@@ -377,6 +396,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_605#canPlaceFlowers
      */
     @Test
+    @Order(605)
     void testSolution_605() {
         System.out.printf(formatSolutionLabel(605, "种花问题"));
         int[] nums = new int[]{1, 0, 0, 0, 1};
@@ -393,6 +413,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_643#findMaxAverage
      */
     @Test
+    @Order(643)
     void testSolution_643() {
         System.out.printf(formatSolutionLabel(643, "子数组最大平均数 I"));
         Solution_643 solution = new Solution_643();
@@ -406,6 +427,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_649#predictPartyVictory
      */
     @Test
+    @Order(649)
     void testSolution_649() {
         System.out.printf(formatSolutionLabel(649, "Dota2 参议院"));
         Solution_649 solution = new Solution_649();
@@ -419,6 +441,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_704#search
      */
     @Test
+    @Order(704)
     void testSolution_704() {
         System.out.printf(formatSolutionLabel(704, "二分查找"));
         int[] nums = new int[]{-1, 0, 3, 5, 9, 12};
@@ -438,6 +461,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_724#pivotIndex
      */
     @Test
+    @Order(724)
     void testSolution_724() {
         System.out.printf(formatSolutionLabel(724, "寻找数组的中心下标"));
 
@@ -453,6 +477,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_735#asteroidCollision
      */
     @Test
+    @Order(735)
     void testSolution_735() {
         System.out.printf(formatSolutionLabel(735, "行星碰撞"));
 
@@ -468,6 +493,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_872#leafSimilar
      */
     @Test
+    @Order(872)
     void testSolution_872() {
         System.out.printf(formatSolutionLabel(872, "叶子相似的树"));
 
@@ -488,6 +514,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_933
      */
     @Test
+    @Order(933)
     void testSolution_933() {
         System.out.printf(formatSolutionLabel(933, "最近的请求次数"));
 
@@ -507,6 +534,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1004#longestOnes
      */
     @Test
+    @Order(1004)
     void testSolution_1004() {
         System.out.printf(formatSolutionLabel(1004, "最大连续1的个数 III"));
         Solution_1004 solution = new Solution_1004();
@@ -527,6 +555,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1071#gcdOfStrings
      */
     @Test
+    @Order(1071)
     void testSolution_1071() {
         System.out.printf(formatSolutionLabel(1071, "字符串的最大公因子"));
         Solution_1071 solution = new Solution_1071();
@@ -541,6 +570,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1207#uniqueOccurrences
      */
     @Test
+    @Order(1207)
     void testSolution_1207() {
         System.out.printf(formatSolutionLabel(1207, "独一无二的出现次数"));
         Solution_1207 solution = new Solution_1207();
@@ -553,6 +583,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1431#kidsWithCandies
      */
     @Test
+    @Order(1431)
     void testSolution_1431() {
         System.out.printf(formatSolutionLabel(1431, "拥有最多糖果的孩子"));
         Solution_1431 solution = new Solution_1431();
@@ -571,6 +602,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1448#goodNodes
      */
     @Test
+    @Order(1448)
     void testSolution_1448() {
         System.out.printf(formatSolutionLabel(1448, "统计二叉树中好节点的数目"));
         Solution_1448 solution = new Solution_1448();
@@ -585,6 +617,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1456#maxVowels
      */
     @Test
+    @Order(1456)
     void testSolution_1456() {
         System.out.printf(formatSolutionLabel(1456, "定长子串中元音的最大数目"));
         Solution_1456 solution = new Solution_1456();
@@ -600,6 +633,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1493#longestSubarray
      */
     @Test
+    @Order(1493)
     void testSolution_1493() {
         System.out.printf(formatSolutionLabel(1493, "删掉一个元素以后全为 1 的最长子数组"));
         Solution_1493 solution = new Solution_1493();
@@ -614,6 +648,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1657#closeStrings
      */
     @Test
+    @Order(1657)
     void testSolution_1657() {
         System.out.printf(formatSolutionLabel(1657, "确定两个字符串是否接近"));
         Solution_1657 solution = new Solution_1657();
@@ -627,6 +662,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1679#maxOperations
      */
     @Test
+    @Order(1679)
     void testSolution_1679() {
         System.out.printf(formatSolutionLabel(1679, "K 和数对的最大数目"));
         Solution_1679 solution = new Solution_1679();
@@ -640,6 +676,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1732#largestAltitude
      */
     @Test
+    @Order(1732)
     void testSolution_1732() {
         System.out.printf(formatSolutionLabel(1732, "找到最高海拔"));
         Solution_1732 solution = new Solution_1732();
@@ -652,6 +689,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_1768#mergeAlternately
      */
     @Test
+    @Order(1768)
     void testSolution_1768() {
         System.out.printf(formatSolutionLabel(1768, "交替合并字符串"));
         Solution_1768 solution = new Solution_1768();
@@ -666,6 +704,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_2095#deleteMiddle
      */
     @Test
+    @Order(2095)
     void testSolution_2095() {
         System.out.printf(formatSolutionLabel(2095, "删除链表的中间节点"));
         Solution_2095 solution = new Solution_2095();
@@ -682,6 +721,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_2130#pairSum
      */
     @Test
+    @Order(2130)
     void testSolution_2130() {
         System.out.printf(formatSolutionLabel(2130, "链表最大孪生和"));
         Solution_2130 solution = new Solution_2130();
@@ -696,6 +736,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_2215#findDifference
      */
     @Test
+    @Order(2215)
     void testSolution_2215() {
         System.out.printf(formatSolutionLabel(2215, "找出两数组的不同"));
         Solution_2215 solution = new Solution_2215();
@@ -710,6 +751,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_2352#equalPairs
      */
     @Test
+    @Order(2352)
     void testSolution_2352() {
         System.out.printf(formatSolutionLabel(2352, "相等行列对"));
         Solution_2352 solution = new Solution_2352();
@@ -729,6 +771,7 @@ public class LeetCodeSolutionTest {
      * @see org.leetcode.solution.Solution_2390#removeStars
      */
     @Test
+    @Order(2390)
     void testSolution_2390() {
         System.out.printf(formatSolutionLabel(2390, "从字符串中移除星号"));
         Solution_2390 solution = new Solution_2390();
