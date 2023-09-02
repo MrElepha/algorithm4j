@@ -376,6 +376,26 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 路径总和 III
+     *
+     * @see org.leetcode.solution.Solution_437#pathSum1
+     */
+    @Test
+    @Order(437)
+    void testSolution_437() {
+        System.out.printf(formatSolutionLabel(437, "路径总和 III"));
+        Solution_437 solution = new Solution_437();
+        // 递归测试
+        Assertions.assertEquals(solution.pathSum1(TreeNode.init(Arrays.asList(10, 5, -3, 3, 2, null, 11, 3, -2, null, 1)), 8), 3);
+        Assertions.assertEquals(solution.pathSum1(TreeNode.init(Arrays.asList(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1)), 22), 3);
+        // 减法溢出测试
+        Assertions.assertEquals(solution.pathSum1(TreeNode.init(Arrays.asList(1000000000, 1000000000, null, 294967296, null, 1000000000, null, 1000000000, null, 1000000000)), 0), 0);
+
+        // 前缀和测试
+        Assertions.assertEquals(solution.pathSum(TreeNode.init(Arrays.asList(10, 5, -3, 3, 2, null, 11, 3, -2, null, 1)), 8), 3);
+    }
+
+    /**
      * 压缩字符串
      *
      * @see org.leetcode.solution.Solution_443#compress
