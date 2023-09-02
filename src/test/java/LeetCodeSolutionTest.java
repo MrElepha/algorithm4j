@@ -598,6 +598,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 二叉树中的最长交错路径
+     *
+     * @see org.leetcode.solution.Solution_1372#longestZigZag
+     */
+    @Test
+    @Order(1372)
+    void testSolution_1372() {
+        System.out.printf(formatSolutionLabel(1372, "二叉树中的最长交错路径"));
+        Solution_1372 solution = new Solution_1372();
+        Assertions.assertEquals(solution.longestZigZag(
+                TreeNode.init(Arrays.asList(1, null, 1, 1, 1, null, null, 1, 1, null, 1, null, null, null, 1, null, 1))
+        ), 3);
+    }
+
+    /**
      * 拥有最多糖果的孩子
      *
      * @see org.leetcode.solution.Solution_1431#kidsWithCandies
