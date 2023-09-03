@@ -6,6 +6,7 @@ import org.leetcode.solution.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LeetCodeSolutionTest {
@@ -227,6 +228,28 @@ public class LeetCodeSolutionTest {
         Assertions.assertEquals(
                 solution.reverseList(ListNode.init(Arrays.asList(1, 2, 3, 4, 5))).print(),
                 ListNode.init(Arrays.asList(5, 4, 3, 2, 1)).print()
+        );
+    }
+
+    /**
+     * 二叉树的最近公共祖先
+     *
+     * @see org.leetcode.solution.Solution_236#lowestCommonAncestor
+     */
+    @Test
+    @Order(236)
+    void testSolution_236() {
+        System.out.printf(formatSolutionLabel(236, "二叉树的最近公共祖先"));
+        Solution_236 solution = new Solution_236();
+        TreeNode root = TreeNode.init(Arrays.asList(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4));
+        Map<Integer, TreeNode> treeMap = root.toMap();
+        Assertions.assertEquals(
+                solution.lowestCommonAncestor(root, treeMap.get(5), treeMap.get(1)),
+                treeMap.get(3)
+        );
+        Assertions.assertEquals(
+                solution.lowestCommonAncestor(root, treeMap.get(5), treeMap.get(4)),
+                treeMap.get(5)
         );
     }
 

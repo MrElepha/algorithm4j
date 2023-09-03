@@ -23,5 +23,6 @@ public class ModelTest {
         System.out.printf("tree node init from: %s \n", input);
         Assertions.assertNull(root.left);
         Assertions.assertNull(root.right.right);
+        Assertions.assertEquals(root.toMap().get(2).left.val, 3);
     }
 }

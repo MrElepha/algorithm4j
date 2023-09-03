@@ -1,8 +1,6 @@
 package org.common.model;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class TreeNode {
     public int val;
@@ -56,5 +54,25 @@ public class TreeNode {
             }
         }
         return root;
+    }
+
+    /**
+     * 将二叉树转成 map<val, treeNode>
+     */
+    public Map<Integer, TreeNode> toMap() {
+        Map<Integer, TreeNode> map = new HashMap<>();
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(this);
+        while (!stack.isEmpty()) {
+            TreeNode parent = stack.pop();
+            map.put(parent.val, parent);
+            if (parent.left != null) {
+                stack.push(parent.left);
+            }
+            if (parent.right != null) {
+                stack.push(parent.right);
+            }
+        }
+        return map;
     }
 }
