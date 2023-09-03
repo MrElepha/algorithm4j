@@ -216,6 +216,26 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 二叉树的右视图
+     *
+     * @see org.leetcode.solution.Solution_199#rightSideView
+     */
+    @Test
+    @Order(199)
+    void testSolution_199() {
+        System.out.printf(formatSolutionLabel(199, "二叉树的右视图"));
+        Solution_199 solution = new Solution_199();
+        Assertions.assertEquals(
+                solution.rightSideView(TreeNode.init(Arrays.asList(1, 2, 3, null, 5, null, 4))),
+                Arrays.asList(1, 3, 4)
+        );
+        Assertions.assertEquals(
+                solution.rightSideView(TreeNode.init(Arrays.asList(1, null, 3))),
+                Arrays.asList(1, 3)
+        );
+    }
+
+    /**
      * 反转链表
      *
      * @see org.leetcode.solution.Solution_206#reverseList
