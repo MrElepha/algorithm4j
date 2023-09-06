@@ -164,6 +164,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 复原 IP 地址
+     *
+     * @see org.leetcode.solution.Solution_93#restoreIpAddresses
+     */
+    @Test
+    @Order(93)
+    void testSolution_93() {
+        System.out.printf(formatSolutionLabel(93, "复原 IP 地址"));
+        Solution_93 solution = new Solution_93();
+        Assertions.assertEquals(solution.restoreIpAddresses("25525511135"), Arrays.asList("255.255.11.135","255.255.111.35"));
+        Assertions.assertEquals(solution.restoreIpAddresses("0000"), Collections.singletonList("0.0.0.0"));
+        Assertions.assertEquals(solution.restoreIpAddresses("101023"), Arrays.asList("1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"));
+    }
+
+    /**
      * 二叉树的中序遍历
      *
      * @see org.leetcode.solution.Solution_94#inorderTraversal
