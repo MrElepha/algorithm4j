@@ -173,9 +173,9 @@ public class LeetCodeSolutionTest {
     void testSolution_93() {
         System.out.printf(formatSolutionLabel(93, "复原 IP 地址"));
         Solution_93 solution = new Solution_93();
-        Assertions.assertEquals(solution.restoreIpAddresses("25525511135"), Arrays.asList("255.255.11.135","255.255.111.35"));
+        Assertions.assertEquals(solution.restoreIpAddresses("25525511135"), Arrays.asList("255.255.11.135", "255.255.111.35"));
         Assertions.assertEquals(solution.restoreIpAddresses("0000"), Collections.singletonList("0.0.0.0"));
-        Assertions.assertEquals(solution.restoreIpAddresses("101023"), Arrays.asList("1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"));
+        Assertions.assertEquals(solution.restoreIpAddresses("101023"), Arrays.asList("1.0.10.23", "1.0.102.3", "10.1.0.23", "10.10.2.3", "101.0.2.3"));
     }
 
     /**
@@ -356,6 +356,20 @@ public class LeetCodeSolutionTest {
         res = new int[]{0};
         solution.moveZeroes(res);
         Assertions.assertArrayEquals(res, new int[]{0});
+    }
+
+    /**
+     * 去除重复字母
+     *
+     * @see org.leetcode.solution.Solution_316#removeDuplicateLetters
+     */
+    @Test
+    @Order(316)
+    void testSolution_316() {
+        System.out.printf(formatSolutionLabel(316, "去除重复字母"));
+        Solution_316 solution = new Solution_316();
+        Assertions.assertEquals(solution.removeDuplicateLetters("bcabc"), "abc");
+        Assertions.assertEquals(solution.removeDuplicateLetters("cbacdcbc"), "acdb");
     }
 
     /**
