@@ -528,6 +528,25 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 二叉搜索树中的搜索
+     *
+     * @see org.leetcode.solution.Solution_700#searchBST
+     */
+    @Test
+    @Order(700)
+    void testSolution_700() {
+        System.out.printf(formatSolutionLabel(700, "二叉搜索树中的搜索"));
+        Solution_700 solution = new Solution_700();
+        TreeNode root = TreeNode.init(Arrays.asList(4, 2, 7, 1, 3));
+        Map<Integer, TreeNode> nodeMap = root.toMap();
+        Assertions.assertEquals(
+                solution.searchBST(root, 2),
+                nodeMap.get(2)
+        );
+        Assertions.assertNull(solution.searchBST(root, 5));
+    }
+
+    /**
      * 二分查找
      *
      * @see org.leetcode.solution.Solution_704#search
