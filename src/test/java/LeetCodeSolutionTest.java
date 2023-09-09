@@ -657,6 +657,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 最大层内元素和
+     *
+     * @see org.leetcode.solution.Solution_1161#maxLevelSum
+     */
+    @Test
+    @Order(1161)
+    void testSolution_1161() {
+        System.out.printf(formatSolutionLabel(1161, "最大层内元素和"));
+        Solution_1161 solution = new Solution_1161();
+        Assertions.assertEquals(solution.maxLevelSum(TreeNode.init(Arrays.asList(1, 7, 0, 7, -8, null, null))), 2);
+        Assertions.assertEquals(solution.maxLevelSum(TreeNode.init(Arrays.asList(989, null, 10250, 98693, -89388, null, null, null, -32127))), 2);
+    }
+
+
+    /**
      * 独一无二的出现次数
      *
      * @see org.leetcode.solution.Solution_1207#uniqueOccurrences
