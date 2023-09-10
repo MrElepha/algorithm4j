@@ -1,5 +1,7 @@
 package org.common.model;
 
+import org.leetcode.solution.Solution_144;
+
 import java.util.*;
 
 public class TreeNode {
@@ -74,5 +76,13 @@ public class TreeNode {
             }
         }
         return map;
+    }
+
+    /**
+     * 先序遍历
+     */
+    public List<Integer> preorderPrint() {
+        Solution_144 solution = new Solution_144();
+        return solution.preorderTraversal(this);
     }
 }

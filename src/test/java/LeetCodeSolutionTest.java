@@ -216,6 +216,32 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 二叉树的前序遍历
+     *
+     * @see org.leetcode.solution.Solution_144#preorderTraversal
+     */
+    @Test
+    @Order(144)
+    void testSolution_144() {
+        System.out.printf(formatSolutionLabel(144, "二叉树的前序遍历"));
+        Solution_144 solution = new Solution_144();
+        Assertions.assertEquals(solution.preorderTraversal(TreeNode.init(Arrays.asList(1, null, 2, 3))), Arrays.asList(1, 2, 3));
+    }
+
+    /**
+     * 二叉树的后序遍历
+     *
+     * @see org.leetcode.solution.Solution_145#postorderTraversal
+     */
+    @Test
+    @Order(145)
+    void testSolution_145() {
+        System.out.printf(formatSolutionLabel(145, "二叉树的后序遍历"));
+        Solution_145 solution = new Solution_145();
+        Assertions.assertEquals(solution.postorderTraversal(TreeNode.init(Arrays.asList(1, null, 2, 3))), Arrays.asList(3, 2, 1));
+    }
+
+    /**
      * 反转字符串中的单词
      *
      * @see org.leetcode.solution.Solution_151#reverseWords
