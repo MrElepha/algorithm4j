@@ -509,6 +509,26 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 删除二叉搜索树中的节点
+     *
+     * @see org.leetcode.solution.Solution_450#deleteNode
+     */
+    @Test
+    @Order(450)
+    void testSolution_450() {
+        System.out.printf(formatSolutionLabel(450, "删除二叉搜索树中的节点"));
+        Solution_450 solution = new Solution_450();
+        Assertions.assertEquals(
+                solution.deleteNode(TreeNode.init(Arrays.asList(5, 3, 6, 2, 4, null, 7)), 3).inorderPrint(),
+                Arrays.asList(2, 4, 5, 6, 7)
+        );
+        Assertions.assertEquals(
+                solution.deleteNode(TreeNode.init(Arrays.asList(5, 3, 6, 2, 4, null, 7)), 0).inorderPrint(),
+                Arrays.asList(2, 3, 4, 5, 6, 7)
+        );
+    }
+
+    /**
      * 种花问题
      *
      * @see org.leetcode.solution.Solution_605#canPlaceFlowers

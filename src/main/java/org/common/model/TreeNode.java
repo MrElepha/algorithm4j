@@ -1,6 +1,7 @@
 package org.common.model;
 
 import org.leetcode.solution.Solution_144;
+import org.leetcode.solution.Solution_94;
 
 import java.util.*;
 
@@ -78,11 +79,20 @@ public class TreeNode {
         return map;
     }
 
+    private static final Solution_144 PREORDER_PRINTER = new Solution_144();
+    private static final Solution_94 INORDER_PRINTER = new Solution_94();
+
     /**
-     * 先序遍历
+     * 先序遍历输出
      */
     public List<Integer> preorderPrint() {
-        Solution_144 solution = new Solution_144();
-        return solution.preorderTraversal(this);
+        return PREORDER_PRINTER.preorderTraversal(this);
+    }
+
+    /**
+     * 中序遍历输出
+     */
+    public List<Integer> inorderPrint() {
+        return INORDER_PRINTER.inorderTraversal(this);
     }
 }
