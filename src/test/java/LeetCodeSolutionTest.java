@@ -277,6 +277,32 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 岛屿数量
+     *
+     * @see org.leetcode.solution.Solution_200#numIslands
+     */
+    @Test
+    @Order(200)
+    void testSolution_200() {
+        System.out.printf(formatSolutionLabel(200, "岛屿数量"));
+        Solution_200 solution = new Solution_200();
+        char[][] input = {
+                {'1', '1', '1', '1', '0'},
+                {'1', '1', '0', '1', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '0', '0', '0'},
+        };
+        Assertions.assertEquals(solution.numIslands(input), 1);
+        char[][] input1 = {
+                {'1','1','0','0','0'},
+                {'1','1','0','0','0'},
+                {'0','0','1','0','0'},
+                {'0','0','0','1','1'},
+        };
+        Assertions.assertEquals(solution.numIslands(input1), 3);
+    }
+
+    /**
      * 反转链表
      *
      * @see org.leetcode.solution.Solution_206#reverseList
