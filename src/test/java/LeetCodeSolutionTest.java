@@ -109,6 +109,19 @@ public class LeetCodeSolutionTest {
         Assertions.assertEquals(res, 4);
     }
 
+    /**
+     * 接雨水
+     *
+     * @see org.leetcode.solution.Solution_42#trap(int[])
+     */
+    @Test
+    @Order(42)
+    void testSolution_42() {
+        System.out.printf(formatSolutionLabel(42, "接雨水"));
+        Solution_42 solution = new Solution_42();
+        Assertions.assertEquals(solution.trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}), 6);
+        Assertions.assertEquals(solution.trap(new int[]{4, 2, 0, 3, 2, 5}), 9);
+    }
 
     /**
      * x 的平方根
@@ -294,10 +307,10 @@ public class LeetCodeSolutionTest {
         };
         Assertions.assertEquals(solution.numIslands(input), 1);
         char[][] input1 = {
-                {'1','1','0','0','0'},
-                {'1','1','0','0','0'},
-                {'0','0','1','0','0'},
-                {'0','0','0','1','1'},
+                {'1', '1', '0', '0', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '1', '0', '0'},
+                {'0', '0', '0', '1', '1'},
         };
         Assertions.assertEquals(solution.numIslands(input1), 3);
     }
