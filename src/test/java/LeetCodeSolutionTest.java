@@ -270,6 +270,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 打家劫舍
+     *
+     * @see org.leetcode.solution.Solution_198#rob
+     */
+    @Test
+    @Order(198)
+    void testSolution_198() {
+        System.out.printf(formatSolutionLabel(198, "打家劫舍"));
+        Solution_198 solution = new Solution_198();
+        Assertions.assertEquals(solution.rob(new int[]{1, 2, 3, 1}), 4);
+        Assertions.assertEquals(solution.rob(new int[]{2, 7, 9, 3, 1}), 12);
+    }
+
+    /**
      * 二叉树的右视图
      *
      * @see org.leetcode.solution.Solution_199#rightSideView
