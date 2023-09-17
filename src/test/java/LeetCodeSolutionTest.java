@@ -346,6 +346,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 打家劫舍 II
+     *
+     * @see org.leetcode.solution.Solution_213#rob
+     */
+    @Test
+    @Order(206)
+    void testSolution_213() {
+        System.out.printf(formatSolutionLabel(213, "打家劫舍 II"));
+        Solution_213 solution = new Solution_213();
+        Assertions.assertEquals(solution.rob(new int[]{2, 3, 2}), 3);
+        Assertions.assertEquals(solution.rob(new int[]{1, 2, 3, 1}), 4);
+        Assertions.assertEquals(solution.rob(new int[]{1, 2, 3}), 3);
+    }
+
+    /**
      * 二叉树的最近公共祖先
      *
      * @see org.leetcode.solution.Solution_236#lowestCommonAncestor
