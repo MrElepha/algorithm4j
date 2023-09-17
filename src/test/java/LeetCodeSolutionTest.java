@@ -124,6 +124,26 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 字母异位词分组
+     *
+     * @see org.leetcode.solution.Solution_49#groupAnagrams
+     */
+    @Test
+    @Order(49)
+    void testSolution_49() {
+        System.out.printf(formatSolutionLabel(49, "字母异位词分组"));
+        Solution_49 solution = new Solution_49();
+        Assertions.assertEquals(
+                solution.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}),
+                Arrays.asList(
+                        Arrays.asList("eat", "tea", "ate"),
+                        Collections.singletonList("bat"),
+                        Arrays.asList("tan", "nat")
+                )
+        );
+    }
+
+    /**
      * x 的平方根
      *
      * @see org.leetcode.solution.Solution_69#mySqrt
