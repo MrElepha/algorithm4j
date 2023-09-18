@@ -249,6 +249,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 最长连续序列
+     *
+     * @see org.leetcode.solution.Solution_128#longestConsecutive
+     */
+    @Test
+    @Order(128)
+    void testSolution_128() {
+        System.out.printf(formatSolutionLabel(128, "最长连续序列"));
+        Solution_128 solution = new Solution_128();
+        Assertions.assertEquals(solution.longestConsecutive(new int[]{100, 4, 200, 1, 3, 2}), 4);
+        Assertions.assertEquals(solution.longestConsecutive(new int[]{0, 3, 7, 2, 5, 8, 4, 6, 0, 1}), 9);
+    }
+
+    /**
      * 二叉树的前序遍历
      *
      * @see org.leetcode.solution.Solution_144#preorderTraversal
