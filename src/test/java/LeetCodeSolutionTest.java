@@ -532,6 +532,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 打家劫舍 III
+     *
+     * @see org.leetcode.solution.Solution_337#rob
+     */
+    @Test
+    @Order(337)
+    void testSolution_337() {
+        System.out.printf(formatSolutionLabel(337, "打家劫舍 III"));
+        Solution_337 solution = new Solution_337();
+        Assertions.assertEquals(solution.rob(TreeNode.init(Arrays.asList(3, 2, 3, null, 3, null, 1))), 7);
+        Assertions.assertEquals(solution.rob(TreeNode.init(Arrays.asList(3, 4, 5, 1, 3, null, 1))), 9);
+    }
+
+    /**
      * 反转字符串中的元音字母
      *
      * @see org.leetcode.solution.Solution_345#reverseVowels
