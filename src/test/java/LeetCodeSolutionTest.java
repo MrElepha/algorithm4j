@@ -289,6 +289,27 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * LRU 缓存
+     *
+     * @see org.leetcode.solution.Solution_146.LRUCache
+     */
+    @Test
+    @Order(146)
+    void testSolution_146() {
+        System.out.printf(formatSolutionLabel(146, "LRU 缓存"));
+        Solution_146.LRUCache lRUCache = new Solution_146.LRUCache(2);
+        lRUCache.put(1, 1); // 缓存是 {1=1}
+        lRUCache.put(2, 2); // 缓存是 {1=1, 2=2}
+        Assertions.assertEquals(lRUCache.get(1), 1);
+        lRUCache.put(3, 3); // 该操作会使得关键字 2 作废，缓存是 {1=1, 3=3}
+        Assertions.assertEquals(lRUCache.get(2), -1);
+        lRUCache.put(4, 4); // 该操作会使得关键字 1 作废，缓存是 {4=4, 3=3}
+        Assertions.assertEquals(lRUCache.get(1), -1);
+        Assertions.assertEquals(lRUCache.get(3), 3);
+        Assertions.assertEquals(lRUCache.get(4), 4);
+    }
+
+    /**
      * 反转字符串中的单词
      *
      * @see org.leetcode.solution.Solution_151#reverseWords
