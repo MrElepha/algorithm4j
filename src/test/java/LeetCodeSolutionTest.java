@@ -711,6 +711,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 二叉树最大宽度
+     *
+     * @see org.leetcode.solution.Solution_662#widthOfBinaryTree
+     */
+    @Test
+    @Order(662)
+    void testSolution_662() {
+        System.out.printf(formatSolutionLabel(662, "二叉树最大宽度"));
+        Solution_662 solution = new Solution_662();
+        Assertions.assertEquals(solution.widthOfBinaryTree(TreeNode.init(Arrays.asList(1, 3, 2, 5, 3, null, 9))), 4);
+        Assertions.assertEquals(solution.widthOfBinaryTree(TreeNode.init(Arrays.asList(1, 3, 2, 5, null, null, 9, 6, null, 7))), 7);
+        Assertions.assertEquals(solution.widthOfBinaryTree(TreeNode.init(Arrays.asList(1, 3, 2, 5))), 2);
+    }
+
+    /**
      * 二叉搜索树中的搜索
      *
      * @see org.leetcode.solution.Solution_700#searchBST
