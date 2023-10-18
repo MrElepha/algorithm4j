@@ -3,10 +3,7 @@ import org.common.model.TreeNode;
 import org.junit.jupiter.api.*;
 import org.leetcode.solution.*;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class LeetCodeSolutionTest {
@@ -43,6 +40,21 @@ public class LeetCodeSolutionTest {
         Solution_11 solution = new Solution_11();
         Assertions.assertEquals(solution.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}), 49);
         Assertions.assertEquals(solution.maxArea(new int[]{1, 1}), 1);
+    }
+
+    /**
+     * 三数之和
+     *
+     * @see org.leetcode.solution.Solution_15#threeSum
+     */
+    @Test
+    @Order(15)
+    void testSolution_15() {
+        System.out.printf(formatSolutionLabel(15, "三数之和"));
+        Solution_15 solution = new Solution_15();
+        Assertions.assertEquals(solution.threeSum(new int[]{-1, 0, 1, 2, -1, -4}), Arrays.asList(Arrays.asList(-1, -1, 2), Arrays.asList(-1, 0, 1)));
+        Assertions.assertEquals(solution.threeSum(new int[]{0, 1, 1}), new ArrayList<>());
+        Assertions.assertEquals(solution.threeSum(new int[]{0, 0, 0}), Collections.singletonList(Arrays.asList(0, 0, 0)));
     }
 
     /**
