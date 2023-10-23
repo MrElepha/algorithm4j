@@ -29,6 +29,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 无重复字符的最长子串
+     *
+     * @see org.leetcode.solution.Solution_3#lengthOfLongestSubstring
+     */
+    @Test
+    @Order(3)
+    void testSolution_3() {
+        System.out.printf(formatSolutionLabel(3, "无重复字符的最长子串"));
+        Solution_3 solution = new Solution_3();
+        Assertions.assertEquals(solution.lengthOfLongestSubstring("abcabcbb"), 3);
+        Assertions.assertEquals(solution.lengthOfLongestSubstring("bbbbb"), 1);
+        Assertions.assertEquals(solution.lengthOfLongestSubstring("pwwkew"), 3);
+    }
+
+    /**
      * 盛最多水的容器
      *
      * @see org.leetcode.solution.Solution_11#maxArea
