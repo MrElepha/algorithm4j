@@ -658,6 +658,21 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 找到字符串中所有字母异位词
+     *
+     * @see org.leetcode.solution.Solution_438#findAnagrams
+     */
+    @Test
+    @Order(438)
+    void testSolution_438() {
+        System.out.printf(formatSolutionLabel(438, "找到字符串中所有字母异位词"));
+        Solution_438 solution = new Solution_438();
+
+        Assertions.assertEquals(solution.findAnagrams("cbaebabacd", "abc"), Arrays.asList(0, 6));
+        Assertions.assertEquals(solution.findAnagrams("abab", "ab"), Arrays.asList(0, 1, 2));
+    }
+
+    /**
      * 压缩字符串
      *
      * @see org.leetcode.solution.Solution_443#compress
