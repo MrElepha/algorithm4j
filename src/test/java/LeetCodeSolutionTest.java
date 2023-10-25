@@ -708,6 +708,20 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 和为 K 的子数组
+     *
+     * @see org.leetcode.solution.Solution_560#subarraySum
+     */
+    @Test
+    @Order(560)
+    void testSolution_560() {
+        System.out.printf(formatSolutionLabel(560, "和为 K 的子数组"));
+        Solution_560 solution = new Solution_560();
+        Assertions.assertEquals(solution.subarraySum(new int[]{1, 1, 1}, 2), 2);
+        Assertions.assertEquals(solution.subarraySum(new int[]{1, 2, 3}, 3), 2);
+    }
+
+    /**
      * 种花问题
      *
      * @see org.leetcode.solution.Solution_605#canPlaceFlowers
