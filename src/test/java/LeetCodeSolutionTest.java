@@ -13,7 +13,7 @@ public class LeetCodeSolutionTest {
     }
 
     /**
-     * 两数之和
+     * 最大子数组和
      *
      * @see org.leetcode.solution.Solution_1#twoSum
      */
@@ -168,6 +168,21 @@ public class LeetCodeSolutionTest {
                         Arrays.asList("tan", "nat")
                 )
         );
+    }
+
+    /**
+     * 最大子数组和
+     *
+     * @see org.leetcode.solution.Solution_53#maxSubArray
+     */
+    @Test
+    @Order(53)
+    void testSolution_53() {
+        System.out.printf(formatSolutionLabel(53, "最大子数组和"));
+        Solution_53 solution = new Solution_53();
+        Assertions.assertEquals(solution.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}), 6);
+        Assertions.assertEquals(solution.maxSubArray(new int[]{1}), 1);
+        Assertions.assertEquals(solution.maxSubArray(new int[]{5, 4, -1, 7, 8}), 23);
     }
 
     /**
