@@ -480,6 +480,27 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 滑动窗口最大值
+     *
+     * @see org.leetcode.solution.Solution_239#maxSlidingWindow
+     */
+    @Test
+    @Order(239)
+    void testSolution_239() {
+        System.out.printf(formatSolutionLabel(239, "滑动窗口最大值"));
+        Solution_239 solution = new Solution_239();
+        Assertions.assertArrayEquals(
+                solution.maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3),
+                new int[]{3, 3, 5, 5, 6, 7}
+        );
+        Assertions.assertArrayEquals(
+                solution.maxSlidingWindow(new int[]{1}, 1),
+                new int[]{1}
+        );
+    }
+
+
+    /**
      * 除自身以外数组的乘积
      *
      * @see org.leetcode.solution.Solution_238#productExceptSelf
