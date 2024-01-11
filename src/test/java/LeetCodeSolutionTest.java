@@ -239,6 +239,30 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 最小覆盖子串
+     *
+     * @see org.leetcode.solution.Solution_76#minWindow
+     */
+    @Test
+    @Order(76)
+    void testSolution_76() {
+        System.out.printf(formatSolutionLabel(76, "最小覆盖子串"));
+        Solution_76 solution = new Solution_76();
+        Assertions.assertEquals(
+                solution.minWindow("ADOBECODEBANC", "ABC"),
+                "BANC"
+        );
+        Assertions.assertEquals(
+                solution.minWindow("a", "a"),
+                "a"
+        );
+        Assertions.assertEquals(
+                solution.minWindow("a", "aa"),
+                ""
+        );
+    }
+
+    /**
      * 复原 IP 地址
      *
      * @see org.leetcode.solution.Solution_93#restoreIpAddresses
