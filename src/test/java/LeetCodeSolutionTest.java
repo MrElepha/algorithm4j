@@ -186,6 +186,26 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 合并区间
+     *
+     * @see org.leetcode.solution.Solution_56#merge
+     */
+    @Test
+    @Order(56)
+    void testSolution_56() {
+        System.out.printf(formatSolutionLabel(56, "合并区间"));
+        Solution_56 solution = new Solution_56();
+        Assertions.assertArrayEquals(
+                solution.merge(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}}),
+                new int[][]{{1, 6}, {8, 10}, {15, 18}}
+        );
+        Assertions.assertArrayEquals(
+                solution.merge(new int[][]{{1, 4}, {4, 5}}),
+                new int[][]{{1, 5}}
+        );
+    }
+
+    /**
      * x 的平方根
      *
      * @see org.leetcode.solution.Solution_69#mySqrt
