@@ -411,6 +411,30 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 轮转数组
+     *
+     * @see org.leetcode.solution.Solution_189#rotate
+     */
+    @Test
+    @Order(189)
+    void testSolution_189() {
+        System.out.printf(formatSolutionLabel(189, "轮转数组"));
+        Solution_189 solution = new Solution_189();
+
+        int[] input = new int[]{1, 2, 3, 4, 5, 6, 7};
+        solution.rotate(input, 3);
+        Assertions.assertArrayEquals(
+                input, new int[]{5, 6, 7, 1, 2, 3, 4}
+        );
+
+        input = new int[]{-1, -100, 3, 99};
+        solution.rotate(input, 2);
+        Assertions.assertArrayEquals(
+                input, new int[]{3, 99, -1, -100}
+        );
+    }
+
+    /**
      * 打家劫舍
      *
      * @see org.leetcode.solution.Solution_198#rob
