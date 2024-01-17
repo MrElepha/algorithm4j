@@ -137,6 +137,33 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 缺失的第一个正数
+     *
+     * @see org.leetcode.solution.Solution_41#firstMissingPositive
+     */
+    @Test
+    @Order(41)
+    void testSolution_41() {
+        System.out.printf(formatSolutionLabel(41, "缺失的第一个正数"));
+        Solution_41 solution = new Solution_41();
+
+        Assertions.assertEquals(
+                solution.firstMissingPositive(new int[]{1, 2, 0}),
+                3
+        );
+
+        Assertions.assertEquals(
+                solution.firstMissingPositive(new int[]{3, 4, -1, 1}),
+                2
+        );
+
+        Assertions.assertEquals(
+                solution.firstMissingPositive(new int[]{7, 8, 9, 11, 12}),
+                1
+        );
+    }
+
+    /**
      * 接雨水
      *
      * @see org.leetcode.solution.Solution_42#trap(int[])
