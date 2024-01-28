@@ -262,6 +262,42 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 矩阵置零
+     *
+     * @see org.leetcode.solution.Solution_73#setZeroes
+     */
+    @Test
+    @Order(73)
+    void testSolution_73() {
+        System.out.printf(formatSolutionLabel(73, "矩阵置零"));
+        Solution_73 solution = new Solution_73();
+        int[][] input = new int[][]{
+                {1, 1, 1},
+                {1, 0, 1},
+                {1, 1, 1}
+        };
+
+        solution.setZeroes(input);
+        Assertions.assertArrayEquals(input, new int[][]{
+                {1, 0, 1},
+                {0, 0, 0},
+                {1, 0, 1}
+        });
+
+        input = new int[][]{
+                {0, 1, 2, 0},
+                {3, 4, 5, 2},
+                {1, 3, 1, 5}
+        };
+        solution.setZeroes(input);
+        Assertions.assertArrayEquals(input, new int[][]{
+                {0, 0, 0, 0},
+                {0, 4, 5, 0},
+                {0, 3, 1, 0}
+        });
+    }
+
+    /**
      * 搜索二维矩阵
      *
      * @see org.leetcode.solution.Solution_74#searchMatrix
