@@ -213,6 +213,32 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 螺旋矩阵
+     *
+     * @see org.leetcode.solution.Solution_54#spiralOrder
+     */
+    @Test
+    @Order(54)
+    void testSolution_54() {
+        System.out.printf(formatSolutionLabel(54, "螺旋矩阵"));
+        Solution_54 solution = new Solution_54();
+        Assertions.assertEquals(
+                solution.spiralOrder(new int[][]{
+                        {1, 2, 3},
+                        {4, 5, 6},
+                        {7, 8, 9}
+                }), Arrays.asList(1, 2, 3, 6, 9, 8, 7, 4, 5)
+        );
+        Assertions.assertEquals(
+                solution.spiralOrder(new int[][]{
+                        {1, 2, 3, 4},
+                        {5, 6, 7, 8},
+                        {9, 10, 11, 12}
+                }), Arrays.asList(1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7)
+        );
+    }
+
+    /**
      * 合并区间
      *
      * @see org.leetcode.solution.Solution_56#merge
