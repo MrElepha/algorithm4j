@@ -500,6 +500,28 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 相交链表
+     *
+     * @see org.leetcode.solution.Solution_160#getIntersectionNode
+     */
+    @Test
+    @Order(160)
+    void testSolution_160() {
+        System.out.printf(formatSolutionLabel(160, "相交链表"));
+        Solution_160 solution = new Solution_160();
+        ListNode intersection = ListNode.init(8, 4, 5);
+        ListNode listA = ListNode.init(4, 1);
+        ListNode listB = ListNode.init(5, 6, 1);
+        listA.next.next = intersection;
+        listB.next.next.next = intersection;
+        Assertions.assertEquals(solution.getIntersectionNode(listA, listB).val, 8);
+
+        listA = ListNode.init(2, 6, 4);
+        listB = ListNode.init(1, 5);
+        Assertions.assertNull(solution.getIntersectionNode(listA, listB));
+    }
+
+    /**
      * 轮转数组
      *
      * @see org.leetcode.solution.Solution_189#rotate
