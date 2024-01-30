@@ -178,6 +178,32 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 旋转图像
+     *
+     * @see org.leetcode.solution.Solution_48#rotate
+     */
+    @Test
+    @Order(48)
+    void testSolution_48() {
+        System.out.printf(formatSolutionLabel(48, "旋转图像"));
+        Solution_48 solution = new Solution_48();
+
+        int[][] matrix = new int[][]{
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        solution.rotate(matrix);
+        Assertions.assertArrayEquals(
+                matrix, new int[][]{
+                        {7, 4, 1},
+                        {8, 5, 2},
+                        {9, 6, 3}
+                }
+        );
+    }
+
+    /**
      * 字母异位词分组
      *
      * @see org.leetcode.solution.Solution_49#groupAnagrams
