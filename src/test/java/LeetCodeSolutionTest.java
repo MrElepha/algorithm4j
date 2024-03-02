@@ -663,6 +663,25 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 回文链表
+     *
+     * @see org.leetcode.solution.Solution_234#isPalindrome
+     */
+    @Test
+    @Order(234)
+    void testSolution_234() {
+        System.out.printf(formatSolutionLabel(234, "回文链表"));
+        Solution_234 solution = new Solution_234();
+
+        ListNode input = ListNode.init(1, 2, 2, 1);
+        Assertions.assertTrue(solution.isPalindrome(input));
+
+        input = ListNode.init(1, 2);
+        Assertions.assertFalse(solution.isPalindrome(input));
+    }
+
+
+    /**
      * 二叉树的最近公共祖先
      *
      * @see org.leetcode.solution.Solution_236#lowestCommonAncestor
