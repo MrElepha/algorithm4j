@@ -464,6 +464,37 @@ public class LeetCodeSolutionTest {
     }
 
     /**
+     * 环形链表
+     *
+     * @see org.leetcode.solution.Solution_141#hasCycle
+     */
+    @Test
+    @Order(141)
+    void testSolution_141() {
+        System.out.printf(formatSolutionLabel(141, "环形链表"));
+        Solution_141 solution = new Solution_141();
+        ListNode input = ListNode.init(3,2,0,-4);
+        input.next.next.next.next = input.next;
+        Assertions.assertTrue(solution.hasCycle(input));
+    }
+
+    /**
+     * 环形链表 II
+     *
+     * @see org.leetcode.solution.Solution_142#detectCycle
+     */
+    @Test
+    @Order(142)
+    void testSolution_142() {
+        System.out.printf(formatSolutionLabel(142, "环形链表 II"));
+        Solution_142 solution = new Solution_142();
+        ListNode input = ListNode.init(3,2,0,-4);
+        input.next.next.next.next = input.next;
+        Assertions.assertEquals(solution.detectCycle(input), input.next);
+    }
+
+
+    /**
      * 二叉树的前序遍历
      *
      * @see org.leetcode.solution.Solution_144#preorderTraversal
